@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meditationen – Leiser Kompass</title>
+<style>
+body { margin:0; padding:0; font-family:"Helvetica Neue", sans-serif; background:linear-gradient(to bottom,#f0f6ff,#ffffff); color:#2f2f2f; text-align:center; }
+header { padding:40px 20px; background-color:#e6f0ff; }
+h1 { font-size:2.4rem; margin-bottom:10px; }
+nav a { margin:0 15px; text-decoration:none; color:#4f81c7; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+section { max-width:700px; margin:40px auto; line-height:1.6; font-size:1.1rem; }
+.highlight { font-weight:bold; color:#4f81c7; }
+.footer { margin-top:50px; padding:20px; font-size:0.9rem; color:#777; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Meditationen</h1>
+<nav>
+<a href="index.html">Startseite</a>
+<a href="ueber-mich.html">Über mich</a>
+<a href="meditationen.html">Meditationen</a>
+<a href="tagesimpulse.html">Tagesimpulse</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="preise.html">Preise</a>
+<a href="impressum.html">Impressum</a>
+</nav>
+</header>
+
+<section>
+<p>Hier findest du kleine Meditationen, die dich zur Ruhe bringen und deine Achtsamkeit stärken.</p>
+<p>Ob 5 Minuten am Morgen oder eine kurze Atemübung zwischendurch – jede Meditation ist eine Einladung, still zu werden und in dich zu hören.</p>
+
+<script>
+const meditationen = [
+"Meditation 1: 5 tiefe Atemzüge bewusst ein- und ausatmen.",
+"Meditation 2: 2 Minuten den Herzschlag spüren und Ruhe finden.",
+"Meditation 3: Augen schließen, Gedanken beobachten ohne zu urteilen."
+];
+const zufall = meditationen[Math.floor(Math.random() * meditationen.length)];
+document.write('<p class="highlight">' + zufall + '</p>');
+</script>
+</section>
+
+<div class="footer">
+© Leiser Kompass – 2025
+</div>
+
+</body>
+</html>
