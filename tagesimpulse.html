@@ -5,51 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tagesimpulse – Leiser Kompass</title>
 <style>
-body { margin:0; padding:0; font-family:"Helvetica Neue", sans-serif; background:linear-gradient(to bottom,#f0f6ff,#ffffff); color:#2f2f2f; text-align:center; }
-header { padding:40px 20px; background-color:#e6f0ff; }
-h1 { font-size:2.4rem; margin-bottom:10px; }
-nav a { margin:0 15px; text-decoration:none; color:#4f81c7; font-weight:bold; }
-nav a:hover { text-decoration:underline; }
-section { max-width:700px; margin:40px auto; line-height:1.6; font-size:1.1rem; }
-.highlight { font-weight:bold; color:#4f81c7; }
-.footer { margin-top:50px; padding:20px; font-size:0.9rem; color:#777; }
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background: linear-gradient(#f0f6ff, #ffffff);
+    color: #2f2f2f;
+    text-align: center;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+h1 {
+    color: #4f81c7;
+}
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+.footer {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #777;
+}
 </style>
 </head>
 <body>
 
-<header>
-<h1>Tagesimpulse</h1>
-<nav>
-<a href="index.html">Startseite</a>
-<a href="ueber-mich.html">Über mich</a>
-<a href="meditationen.html">Meditationen</a>
-<a href="tagesimpulse.html">Tagesimpulse</a>
-<a href="kontakt.html">Kontakt</a>
-<a href="preise.html">Preise</a>
-<a href="impressum.html">Impressum</a>
-</nav>
-</header>
-
-<section>
-<p>Hier findest du tägliche Impulse, kleine Gedanken und Anregungen für mehr Achtsamkeit und innere Ruhe.</p>
-
-<script>
-const impulsen = [
-"Nimm dir heute 5 Minuten für Stille.",
-"Schreibe heute 3 Dinge auf, für die du dankbar bist.",
-"Atme heute bewusst 10 Mal tief ein und aus.",
-"Lächle heute mindestens einmal bewusst.",
-"Beobachte heute einen Sonnenaufgang oder Sonnenuntergang."
-];
-const heute = new Date();
-const index = heute.getDate() % impulsen.length;
-document.write('<p class="highlight">' + impulsen[index] + '</p>');
-</script>
-</section>
+<div class="container">
+    <h1>Tagesimpuls</h1>
+    <p id="impuls"></p>
+</div>
 
 <div class="footer">
-© Leiser Kompass – 2025
+© Leiser Kompass – Alexander Skornia – 2025
 </div>
+
+<script>
+const impulse = [
+    "Heute darfst du langsamer sein als deine Gedanken.",
+    "Nicht alles muss heute gelöst werden. Atmen reicht.",
+    "Stille ist kein Mangel – sie ist ein Raum.",
+    "Du musst deinen Weg nicht kennen, nur den nächsten Schritt.",
+    "Innere Ruhe beginnt mit Ehrlichkeit dir selbst gegenüber.",
+    "Auch kleine Pausen verändern den ganzen Tag.",
+    "Vertraue dem Tempo deines eigenen Herzens."
+];
+
+// Tageszahl seit einem festen Datum
+const start = new Date("2025-01-01");
+const today = new Date();
+const diffDays = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+
+// 7-Tage-Rotation
+const index = diffDays % impulse.length;
+
+document.getElementById("impuls").textContent = impulse[index];
+</script>
 
 </body>
 </html>
