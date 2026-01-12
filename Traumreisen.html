@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Traumreisen – Leiser Kompass</title>
+<style>
+body{font-family:Helvetica Neue,sans-serif;text-align:center}
+.section{display:none;max-width:700px;margin:auto;animation:fade 1s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+</style>
+</head>
+<body>
+
+<h1>Traumreisen</h1>
+
+<div id="t1" class="section">
+<p>Du gehst einen stillen Waldweg entlang…</p>
+</div>
+
+<div id="t2" class="section">
+<p>Du erreichst deinen inneren Kraftort…</p>
+</div>
+
+<div id="t3" class="section">
+<p>Der Abend darf loslassen…</p>
+</div>
+
+<script>
+let i=0, s=document.querySelectorAll('.section');
+function cycle(){
+s.forEach(e=>e.style.display='none');
+s[i].style.display='block';
+i=(i+1)%s.length;
+}
+cycle();
+setInterval(cycle,20000);
+</script>
+
+</body>
+</html>
