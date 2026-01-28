@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meditationen – Leiser Kompass</title>
+
+<style>
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background: linear-gradient(#f0f6ff, #ffffff);
+    color: #2f2f2f;
+    text-align: center;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+h1 {
+    color: #4f81c7;
+}
+h2 {
+    margin-top: 30px;
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+.footer {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #777;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Meditation des Tages</h1>
+    <h2 id="titel"></h2>
+    <p id="text"></p>
+</div>
+
+<div class="footer">
+© Leiser Kompass – Alexander Skornia – 2025
+</div>
+
+<script>
+const meditationen = [
+{
+ titel: "Atem & Ankommen",
+ text: "Setze oder lege dich bequem hin. Schließe sanft deine Augen. Atme tief durch die Nase ein und langsam durch den Mund wieder aus. Spüre, wie dein Körper schwerer wird. Du musst nichts ver[...]"
+},
+{
+ titel: "Stille wahrnehmen",
+ text: "Richte deine Aufmerksamkeit auf die Stille zwischen zwei Atemzügen. Dort geschieht nichts – und doch ist alles da. Bleibe einige Atemzüge in dieser stillen Wahrnehmung."
+},
+{
+ titel: "Körperreise",
+ text: "Wandere mit deiner Aufmerksamkeit langsam durch deinen Körper. Von den Füßen bis zum Kopf. Nimm wahr, ohne zu bewerten. Alles darf so sein, wie es ist."
+},
+{
+ titel: "Loslassen",
+ text: "Mit jedem Ausatmen lässt du ein wenig mehr los. Gedanken, Spannungen, Erwartungen. Stell dir vor, wie sie sanft weiterziehen dürfen."
+},
+{
+ titel: "Herzraum",
+ text: "Lege eine Hand auf dein Herz. Spüre den Rhythmus darunter. Vielleicht entsteht ein Gefühl von Wärme oder Ruhe. Bleibe einige Atemzüge dort."
+},
+{
+ titel: "Dankbarkeit",
+ text: "Erinnere dich an drei kleine Dinge, für die du heute dankbar sein kannst. Lass dieses Gefühl ruhig größer werden."
+},
+{
+ titel: "Vertrauen",
+ text: "Du musst deinen Weg nicht kennen. Es reicht, ihm zu vertrauen. Atme ruhig weiter und erlaube dir, getragen zu sein."
+}
+];
+
+// Tagesberechnung
+const start = new Date("2025-01-01");
+const today = new Date();
+const diffDays = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+const index = diffDays % meditationen.length;
+
+document.getElementById("titel").textContent = meditationen[index].titel;
+document.getElementById("text").textContent = meditationen[index].text;
+</script>
+
+</body>
+</html>
