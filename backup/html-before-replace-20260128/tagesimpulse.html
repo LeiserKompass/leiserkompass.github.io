@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tagesimpulse – Leiser Kompass</title>
+<style>
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background: linear-gradient(#f0f6ff, #ffffff);
+    color: #2f2f2f;
+    text-align: center;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+h1 {
+    color: #4f81c7;
+}
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+.footer {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #777;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tagesimpuls</h1>
+    <p id="impuls"></p>
+</div>
+
+<div class="footer">
+© Leiser Kompass – Alexander Skornia – 2025
+</div>
+
+<script>
+const impulse = [
+    "Heute darfst du langsamer sein als deine Gedanken.",
+    "Nicht alles muss heute gelöst werden. Atmen reicht.",
+    "Stille ist kein Mangel – sie ist ein Raum.",
+    "Du musst deinen Weg nicht kennen, nur den nächsten Schritt.",
+    "Innere Ruhe beginnt mit Ehrlichkeit dir selbst gegenüber.",
+    "Auch kleine Pausen verändern den ganzen Tag.",
+    "Vertraue dem Tempo deines eigenen Herzens."
+];
+
+// Tageszahl seit einem festen Datum
+const start = new Date("2025-01-01");
+const today = new Date();
+const diffDays = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+
+// 7-Tage-Rotation
+const index = diffDays % impulse.length;
+
+document.getElementById("impuls").textContent = impulse[index];
+</script>
+
+</body>
+</html>
