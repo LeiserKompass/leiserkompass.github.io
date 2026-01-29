@@ -1,0 +1,54 @@
+body {
+margin: 0;
+font-family: "Helvetica Neue", Arial, sans-serif;
+background: #f9fbfd;
+color: #2f2f2f;
+text-align: center;
+}
+
+.header {
+background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+padding: 50px 20px 30px;
+}
+
+h1 {
+font-size: 2.6rem;
+margin-bottom: 10px;
+}
+
+.subtitle {
+font-size: 1.1rem;
+color: #4f81c7;
+margin-bottom: 25px;
+}
+
+nav a {
+margin: 0 10px;
+text-decoration: none;
+color: #4f81c7;
+font-weight: 600;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+.container {
+max-width: 720px;
+margin: 60px auto;
+padding: 0 20px;
+}
+
+.intro {
+font-size: 1.3rem;
+line-height: 1.8;
+}
+
+footer {
+margin-top: 80px;
+padding: 20px;
+font-size: 0.9rem;
+color: #777;
+}
+
+Muss ich die extra einstellen
